@@ -9,9 +9,7 @@ import {View, Text} from 'react-native';
 const Header = ({leftComponent, title, rightComponent}) => (
   <View style={styles.container}>
     <View>{leftComponent}</View>
-    <View>
-      <Text>{title}</Text>
-    </View>
+    <Text style={styles.title}>{title}</Text>
     <View>{rightComponent}</View>
   </View>
 );

@@ -1,8 +1,8 @@
 import {combineReducers} from 'redux';
-import content from './content.reducer';
 import notes from './notes.reducer';
+import heartFilter from './heartFilter.reducer';
 
 export default combineReducers({
-  content,
-  notes
+  notes,
+  heartFilter
 });

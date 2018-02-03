@@ -7,8 +7,17 @@ export default StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    elevation: 5,
+    elevation: 2,
     width: '100%',
+    shadowColor: 'black',
+    shadowOffset: {width: 0, height: 2},
+    shadowOpacity: 0.1,
+    shadowRadius: 2,
     backgroundColor: theme.HEADER_COLOR
+  },
+  title: {
+    color: 'white',
+    fontWeight: '800',
+    fontSize: 20
   }
 });

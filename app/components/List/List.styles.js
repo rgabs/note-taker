@@ -1,23 +1,16 @@
 import theme from '../../styles/theme.style';
-import {headingText} from '../../styles/common.style';
+import commonStyles from '../../styles/common.style';
 
 export default {
   listItemWrapper: {
-    paddingHorizontal: 10,
-    paddingVertical: 15,
+    padding: 10,
+    margin: 10,
+    borderRadius: 10,
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between'
-  },
-  lightBackground: {
-    backgroundColor: 'white'
-  },
-  darkBackground: {
-    backgroundColor: theme.BACKGROUND_COLOR_LIGHT
-  },
-  heading: {
-    ...headingText,
-    paddingHorizontal: 0
+    backgroundColor: 'white',
+    justifyContent: 'space-between',
+    ...commonStyles.shadow
   },
   subHeading: {
 

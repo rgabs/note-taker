@@ -1,5 +1,6 @@
 export default {
   PRIMARY_COLOR: '#39BFBA',
+  PLACEHOLDER_COLOR: '#ffffffb0',
   HEADER_COLOR: '#2C908C',
   FONT_SIZE_SMALL: 12,
   FONT_SIZE_MEDIUM: 14,

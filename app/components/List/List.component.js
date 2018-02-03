@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import result from 'lodash/result';
 import styles from './List.styles.js';
-import {FlatList, TouchableOpacity} from 'react-native';
+import {FlatList} from 'react-native';
 import {Text, View} from 'react-native';
 import noop from 'lodash';
 
@@ -13,18 +13,18 @@ class List extends Component {
     const heading = result(item, headingKey);
     const subHeading = result(item, subHeadingKey);
     return (
-      <TouchableOpacity id={index}>
-        <View key={index} style={styles.listItemWrapper} animation='fadeIn' duration={500}>
-          <View>
-            {heading ? <Text numberOfLines={2} ellipsizeMode='tail' style={styles.heading} >{heading}</Text> : null}
-            {subHeading ? <Text numberOfLines={3} ellipsizeMode='tail' style={styles.subHeading}>{subHeading}</Text> : null}
-          </View>
+      <View key={index} style={styles.listItemWrapper} animation='fadeIn' duration={500}>
+        <View>
+          {heading ? <Text style={styles.heading} >{heading}</Text> : null}
+          {subHeading ? <Text  style={styles.subHeading}>{subHeading}</Text> : null}
+          <Text onPress={this.props.onStarPress(item.id)}>STAR</Text>
+          <Text onPress={this.props.onDeletePress(item.id)}>DELETE</Text>
         </View>
-      </TouchableOpacity>
+      </View>
     );
   }
 
-  _keyExtractor = (item, index) => index
+  _keyExtractor = (item) => item.id
 
   render () {
     const {data} = this.props;
