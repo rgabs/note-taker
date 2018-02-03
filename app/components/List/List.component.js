@@ -4,7 +4,6 @@ import result from 'lodash/result';
 import styles from './List.styles.js';
 import {FlatList} from 'react-native';
 import {Text, View} from 'react-native';
-import noop from 'lodash';
 
 class List extends Component {
 
@@ -37,10 +36,10 @@ List.defaultProps = {
   data: [],
   headingKey: 'heading',
   subHeadingKey: 'subHeading',
-  onPress: noop
 };
 List.propTypes = {
-  onPress: PropTypes.func,
+  onStarPress: PropTypes.func,
+  onDeletePress: PropTypes.func,
   data: PropTypes.array,
   headingKey: PropTypes.string,
   subHeadingKey: PropTypes.string

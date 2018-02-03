@@ -1,4 +1,4 @@
-import {ADD_NOTE} from '../actions/index.actions';
+import {ADD_NOTE, TOGGLE_HEART, DELETE_NOTE} from '../actions/index.actions';
 
 const notes = (state = [{
   title: 'dfds',
@@ -13,13 +13,12 @@ const notes = (state = [{
       heart: false
     }];
   }
-  case 'TOGGLE_HEART': {
+  case TOGGLE_HEART: {
     return state.map((note) => note.id === action.payload ? {...note, heart: !note.heart} : note);
   }
-  case 'DELETE_NOTE': {
+  case DELETE_NOTE: {
     return state.filter((note) => note.id !== action.payload);
   }
-  case 'SHOW_ALL':
   default:
     return state;
   }

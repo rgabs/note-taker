@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
-// import {setTitle, setText} from '../redux/actions/index.actions';
 import Home from '../components/Home/Home.component';
+import * as actions from '../redux/actions/index.actions';
 
 const getFilteredNotes = (notes, heartFilter) => heartFilter ? notes.filter((note) => note.heart) : notes;
 
@@ -10,17 +10,9 @@ const mapStateToProps = ({notes, heartFilter}) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  toggleHeartFilter: () => dispatch({
-    type: 'TOGGLE_HEART_FILTER'
-  }),
-  toggleHeartForNote: (id) => () => dispatch({
-    type: 'TOGGLE_HEART',
-    payload: id
-  }),
-  deleteNote: (id) => () => dispatch({
-    type: 'DELETE_NOTE',
-    payload: id
-  })
+  toggleHeartFilter: () => dispatch(actions.toggleHeartFilter()),
+  toggleHeartForNote: (id) => () => dispatch(actions.toggleHeartForNote(id)),
+  deleteNote: (id) => () => dispatch(actions.deleteNote(id))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
