@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {View, Text, Platform, TextInput} from 'react-native';
+import {View, Platform, TextInput} from 'react-native';
 import Modal from 'react-native-modal-overlay';
 import StatusBar from '../StatusBar/StatusBar.component';
 import Touchable from 'react-native-platform-touchable';
@@ -16,7 +16,7 @@ class AddNote extends Component {
     note: ''
   }
   setNote = (note) => this.setState({note})
-  
+
   onAddNotePress = () => {
     this.props.saveNote(this.state.note);
     this.props.onClosePress();
