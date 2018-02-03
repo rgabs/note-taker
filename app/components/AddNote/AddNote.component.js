@@ -36,7 +36,7 @@ class AddNote extends Component {
         {Platform.OS === 'ios' ? <StatusBar /> : null}
         <Header title='Add Note' rightComponent={this.headerRight} leftComponent={this.headerLeft}/>
         <View style={styles.inputContainer}>
-          <TextInput underlineColorAndroid placeholderTextColor={theme.PLACEHOLDER_COLOR} placeholder="What's on your mind?"
+          <TextInput underlineColorAndroid='transparent' placeholderTextColor={theme.PLACEHOLDER_COLOR} placeholder="What's on your mind?"
             multiline style={styles.input} onChangeText={this.setNote}/>
         </View>
 
