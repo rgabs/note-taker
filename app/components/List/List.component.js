@@ -29,7 +29,6 @@ class List extends Component {
         <View  style={styles.listItemWrapper} animation='fadeIn' duration={500}>
           {heading ? <Text style={styles.heading} >{heading}</Text> : null}
           {subHeading ? <Text  style={styles.subHeading}>{subHeading}</Text> : null}
-          <Text onPress={this.props.onStarPress(item.id)}>STAR</Text>
         </View>
       </Swipeable>
     );
