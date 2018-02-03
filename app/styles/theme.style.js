@@ -8,4 +8,5 @@ export default {
   FONT_WEIGHT_BOLD: '700',
   HEADER_HEIGHT: 55,
   CONTAINER_PADDING: 10,
+  BORDER_COLOR: '#a5a5a5'
 };

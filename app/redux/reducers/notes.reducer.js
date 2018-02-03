@@ -3,7 +3,8 @@ import {ADD_NOTE, TOGGLE_HEART, DELETE_NOTE} from '../actions/index.actions';
 const notes = (state = [{
   title: 'dfds',
   text: 'wqr3r',
-  id: '1234'
+  id: '1234',
+  heart: false
 }], action) => {
   switch (action.type) {
   case ADD_NOTE: {

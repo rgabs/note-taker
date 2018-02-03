@@ -6,10 +6,9 @@ export default {
     padding: 10,
     margin: 10,
     borderRadius: 10,
-    flexDirection: 'row',
-    alignItems: 'center',
     backgroundColor: 'white',
-    justifyContent: 'space-between',
+    borderColor: theme.BORDER_COLOR,
+    borderWidth: 1,
     ...commonStyles.shadow
   },
   subHeading: {
