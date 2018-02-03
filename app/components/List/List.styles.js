@@ -11,7 +11,15 @@ export default {
     borderWidth: 1,
     ...commonStyles.shadow
   },
-  subHeading: {
-
+  rightContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    paddingHorizontal: 15
+  },
+  leftContainer: {
+    flex: 1,
+    alignItems: 'flex-end',
+    justifyContent: 'center',
+    paddingHorizontal: 15
   }
 };
