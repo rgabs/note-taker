@@ -20,7 +20,8 @@ export default {
     flex: 1,
     padding: 10,
     fontSize: 20,
-    color: 'white'
+    color: 'white',
+    textAlignVertical: 'top'
   },
   modalContainer: {
     padding: 0,
