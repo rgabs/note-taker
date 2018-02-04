@@ -17,6 +17,7 @@ class AddNote extends Component {
 
   onAddNotePress = () => {
     this.state.note && this.props.saveNote(this.state.note);
+    this.setState({note: ''});
     this.props.onClosePress();
   }
 
