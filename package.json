@@ -58,6 +58,9 @@
     },
     "transformIgnorePatterns": [
       "/node_modules/(?!react-native|react-clone-referenced-element)"
-    ]
+    ],
+    "moduleNameMapper": {
+      "styled-components": "<rootDir>/node_modules/styled-components/dist/styled-components.native.cjs.js"
+    }
   }
 }
