@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {View, Platform, TextInput} from 'react-native';
+import {Platform} from 'react-native';
 import Modal from 'react-native-modal-overlay';
 import StatusBar from '../StatusBar/StatusBar.component';
 import Header from '../Header/Header.component';
-import styles from './AddNote.component.style.js';
+import styles, {InputWrapper, NoteInput} from './AddNote.component.styled.js';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import theme from '../../styles/theme.style';
 import {HeaderIconWrapper} from '../../styles/common.styled';
@@ -34,10 +34,10 @@ class AddNote extends Component {
           childrenWrapperStyle={styles.modalChildrenWrapper}>
         {Platform.OS === 'ios' ? <StatusBar /> : null}
         <Header title='Add Note' rightComponent={this.headerRight} leftComponent={this.headerLeft}/>
-        <View style={styles.inputContainer}>
-          <TextInput underlineColorAndroid='transparent' placeholderTextColor={theme.PLACEHOLDER_COLOR} placeholder="What's on your mind?"
-            multiline style={styles.input} onChangeText={this.setNote}/>
-        </View>
+        <InputWrapper>
+          <NoteInput underlineColorAndroid='transparent' placeholderTextColor={theme.PLACEHOLDER_COLOR} placeholder="What's on your mind?"
+            multiline onChangeText={this.setNote}/>
+        </InputWrapper>
       </Modal>);
   }
 }
