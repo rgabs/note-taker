@@ -6,16 +6,16 @@ import {HeaderIconWrapper} from '../../styles/common.styled.js';
 import StatusBar from '../StatusBar/StatusBar.component.js';
 import noop from 'lodash/noop';
 import List from '../List/List.component.js';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import { FontAwesome } from '@expo/vector-icons'; // 6.2.2
 
 class Home extends Component {
 
   getHeaderLeft = () => <HeaderIconWrapper onPress={this.props.toggleHeartFilter}>
-    <Icon name={this.props.heartFilter ? 'heart' : 'heart-o'} size={30} color='white' />
+    <FontAwesome name={this.props.heartFilter ? 'heart' : 'heart-o'} size={30} color='white' />
   </HeaderIconWrapper>;
 
   headerRight = <HeaderIconWrapper onPress={this.props.onAddNotePress}>
-    <Icon name='plus' size={30} color='white' />
+    <FontAwesome name='plus' size={30} color='white' />
   </HeaderIconWrapper>;
 
   render () {

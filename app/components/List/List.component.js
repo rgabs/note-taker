@@ -5,7 +5,7 @@ import {ListItemWrapper, RightSwipeWrapper, LeftSwipeWrapper} from './List.style
 import {FlatList} from 'react-native';
 import {Text} from 'react-native';
 import Swipeable from 'react-native-swipeable';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import { FontAwesome } from '@expo/vector-icons'; // 6.2.2
 
 class List extends Component {
 
@@ -15,12 +15,12 @@ class List extends Component {
     const subHeading = result(item, subHeadingKey);
     const right = [
       <RightSwipeWrapper key={`${item.id}right`} onPress={this.props.onDeletePress(item.id)}>
-        <Icon name='trash-o' size={35} color='white'/>
+        <FontAwesome name='trash-o' size={35} color='white'/>
       </RightSwipeWrapper>
     ];
     const leftButtons = [
       <LeftSwipeWrapper key={`${item.id}left`} onPress={this.props.onStarPress(item.id)}>
-        <Icon name={item.heart ? 'heart' : 'heart-o'} size={35} color='white'/>
+        <FontAwesome name={item.heart ? 'heart' : 'heart-o'} size={35} color='white'/>
       </LeftSwipeWrapper>
     ];
     return (

@@ -5,7 +5,7 @@ import Modal from 'react-native-modal-overlay';
 import StatusBar from '../StatusBar/StatusBar.component.js';
 import Header from '../Header/Header.component.js';
 import styles, {InputWrapper, NoteInput} from './AddNote.component.styled.js';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import { FontAwesome } from '@expo/vector-icons'; // 6.2.2
 import theme from '../../styles/theme.style.js';
 import {HeaderIconWrapper} from '../../styles/common.styled.js';
 
@@ -21,11 +21,11 @@ class AddNote extends Component {
   }
 
   headerRight = <HeaderIconWrapper onPress={this.props.onClosePress}>
-    <Icon name='times' size={30} color='white' />
+    <FontAwesome name='times' size={30} color='white' />
   </HeaderIconWrapper>
 
   headerLeft = <HeaderIconWrapper onPress={this.onAddNotePress}>
-    <Icon name='check' size={30} color='white' />
+    <FontAwesome name='check' size={30} color='white' />
   </HeaderIconWrapper>
 
   render () {
