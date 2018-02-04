@@ -2,17 +2,14 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './Header.component.style';
-import {ShadowView} from '../../styles/common.styled';
-import {View, Text} from 'react-native';
-
+import {HeaderWrapper, Title} from './Header.component.styled';
 
 const Header = ({leftComponent, title, rightComponent}) => (
-  <ShadowView style={styles.container}>
-    <View>{leftComponent}</View>
-    <Text style={styles.title}>{title}</Text>
-    <View>{rightComponent}</View>
-  </ShadowView>
+  <HeaderWrapper>
+    {leftComponent}
+    <Title>{title}</Title>
+    {rightComponent}
+  </HeaderWrapper>
 );
 
 Header.propTypes = {
