@@ -6,7 +6,7 @@ import {HeaderIconWrapper} from '../../styles/common.styled.js';
 import StatusBar from '../StatusBar/StatusBar.component.js';
 import noop from 'lodash/noop';
 import List from '../List/List.component.js';
-import { FontAwesome } from '@expo/vector-icons'; // 6.2.2
+import {FontAwesome} from '@expo/vector-icons'; // 6.2.2
 
 class Home extends Component {
 

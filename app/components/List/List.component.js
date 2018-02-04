@@ -5,7 +5,7 @@ import {ListItemWrapper, RightSwipeWrapper, LeftSwipeWrapper} from './List.style
 import {FlatList} from 'react-native';
 import {Text} from 'react-native';
 import Swipeable from 'react-native-swipeable';
-import { FontAwesome } from '@expo/vector-icons'; // 6.2.2
+import {FontAwesome} from '@expo/vector-icons'; // 6.2.2
 
 class List extends Component {
 

@@ -5,7 +5,7 @@ import Modal from 'react-native-modal-overlay';
 import StatusBar from '../StatusBar/StatusBar.component.js';
 import Header from '../Header/Header.component.js';
 import styles, {InputWrapper, NoteInput} from './AddNote.component.styled.js';
-import { FontAwesome } from '@expo/vector-icons'; // 6.2.2
+import {FontAwesome} from '@expo/vector-icons'; // 6.2.2
 import theme from '../../styles/theme.style.js';
 import {HeaderIconWrapper} from '../../styles/common.styled.js';
 
