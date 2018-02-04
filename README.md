@@ -58,3 +58,11 @@ Steps to view the app on expo:
 <img src="/screenshots/5.png" width='25%' style="width: 30%;display:inline-block;" hspace="20">
 <img src="/screenshots/6.png" width='25%' style="width: 30%;display:inline-block;" hspace="20">
 </div>
+
+
+## TODO
+
++ Persist notes using AsyncStorage.
++ Store the addNoteVisibility in redux store.
++ 100% test coverage.
++ Use redux thunk for async actions.
