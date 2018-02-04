@@ -1,7 +1,6 @@
-import theme from './theme.style';
-import React from 'react';
-import styled from 'styled-components';
 import Touchable from 'react-native-platform-touchable';
+import theme from './theme.style';
+import styled from 'styled-components';
 
 export const AppWrapper = styled.View`
   flex: 1

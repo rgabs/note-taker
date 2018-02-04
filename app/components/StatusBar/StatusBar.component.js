@@ -1,9 +1,11 @@
 import React from 'react';
-import {View, StatusBar} from 'react-native';
-import styles from './StatusBar.component.style.js';
+import {StatusBar} from 'react-native';
+import {StatusBarWrapper} from './StatusBar.component.styled.js';
 
-const CustomStatusBar = () => <View style={styles.container}>
-  <StatusBar backgroundColor='blue' barStyle='light-content' translucent/>
-</View>;
+const CustomStatusBar = () => (
+  <StatusBarWrapper>
+    <StatusBar backgroundColor='blue' barStyle='light-content' translucent/>
+  </StatusBarWrapper>
+);
 
 export default CustomStatusBar;

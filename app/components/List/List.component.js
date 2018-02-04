@@ -1,12 +1,10 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import result from 'lodash/result';
-import styles from './List.styles.js';
+import {ListItemWrapper, RightSwipeWrapper, LeftSwipeWrapper} from './List.styled.js';
 import {FlatList} from 'react-native';
 import {Text} from 'react-native';
-import {ShadowView} from '../../styles/common.styled';
 import Swipeable from 'react-native-swipeable';
-import Touchable from 'react-native-platform-touchable';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 class List extends Component {
@@ -16,21 +14,21 @@ class List extends Component {
     const heading = result(item, headingKey);
     const subHeading = result(item, subHeadingKey);
     const right = [
-      <Touchable key={`${item.id}right`} style={styles.rightContainer} onPress={this.props.onDeletePress(item.id)}>
+      <RightSwipeWrapper key={`${item.id}right`} onPress={this.props.onDeletePress(item.id)}>
         <Icon name='trash-o' size={35} color='white'/>
-      </Touchable>
+      </RightSwipeWrapper>
     ];
     const leftButtons = [
-      <Touchable key={`${item.id}left`} style={styles.leftContainer} onPress={this.props.onStarPress(item.id)}>
+      <LeftSwipeWrapper key={`${item.id}left`} onPress={this.props.onStarPress(item.id)}>
         <Icon name={item.heart ? 'heart' : 'heart-o'} size={35} color='white'/>
-      </Touchable>
+      </LeftSwipeWrapper>
     ];
     return (
       <Swipeable leftButtons={leftButtons} rightButtons={right} >
-        <ShadowView  style={styles.listItemWrapper} animation='fadeIn' duration={500}>
+        <ListItemWrapper animation='fadeIn' duration={500}>
           {heading ? <Text>{heading}</Text> : null}
           {subHeading ? <Text>{subHeading}</Text> : null}
-        </ShadowView>
+        </ListItemWrapper>
       </Swipeable>
     );
   }
