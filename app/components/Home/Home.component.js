@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import {View} from 'react-native';
 import PropTypes from 'prop-types';
-import styles from './Home.component.style';
+import {HomeWrapper} from './Home.component.styled';
 import Header from '../Header/Header.component';
 import {HeaderIconWrapper} from '../../styles/common.styled';
 import StatusBar from '../StatusBar/StatusBar.component';
@@ -23,12 +22,12 @@ class Home extends Component {
     const {notes} = this.props;
 
     return (
-      <View style={styles.container}>
+      <HomeWrapper>
         <StatusBar />
         <Header leftComponent={this.getHeaderLeft()} rightComponent={this.headerRight} title='Notes'/>
         <List onStarPress={this.props.toggleHeartForNote} onDeletePress={this.props.deleteNote}
           headingKey='title' subHeadingKey='text' data={notes}/>
-      </View>
+      </HomeWrapper>
     );
   }
 }
