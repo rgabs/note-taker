@@ -1,5 +1,5 @@
 import Touchable from 'react-native-platform-touchable';
-import theme from './theme.style';
+import theme from './theme.style.js';
 import styled from 'styled-components';
 
 export const AppWrapper = styled.View`

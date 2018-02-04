@@ -1,5 +1,5 @@
 import {Platform, StatusBar} from 'react-native';
-import theme from '../../styles/theme.style';
+import theme from '../../styles/theme.style.js';
 import styled from 'styled-components';
 
 const height = Platform.select({

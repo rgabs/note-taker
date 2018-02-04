@@ -1,4 +1,4 @@
-import List from '../List.component';
+import List from '../List.component.js';
 import React from 'react';
 import renderer from 'react-test-renderer';
 

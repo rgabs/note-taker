@@ -2,7 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import {HeaderWrapper, Title} from './Header.component.styled';
+import {HeaderWrapper, Title} from './Header.component.styled.js';
 
 const Header = ({leftComponent, title, rightComponent}) => (
   <HeaderWrapper>

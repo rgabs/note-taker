@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {HomeWrapper} from './Home.component.styled';
-import Header from '../Header/Header.component';
-import {HeaderIconWrapper} from '../../styles/common.styled';
-import StatusBar from '../StatusBar/StatusBar.component';
+import {HomeWrapper} from './Home.component.styled.js';
+import Header from '../Header/Header.component.js';
+import {HeaderIconWrapper} from '../../styles/common.styled.js';
+import StatusBar from '../StatusBar/StatusBar.component.js';
 import noop from 'lodash/noop';
-import List from '../List/List.component';
+import List from '../List/List.component.js';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 class Home extends Component {

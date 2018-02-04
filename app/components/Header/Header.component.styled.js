@@ -1,6 +1,6 @@
-import theme from '../../styles/theme.style';
+import theme from '../../styles/theme.style.js';
 import styled from 'styled-components';
-import {ShadowView} from '../../styles/common.styled';
+import {ShadowView} from '../../styles/common.styled.js';
 
 export const HeaderWrapper = styled(ShadowView)`
   height: ${theme.HEADER_HEIGHT};

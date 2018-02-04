@@ -1,4 +1,4 @@
-import {TOGGLE_HEART_FILTER} from '../actions/index.actions';
+import {TOGGLE_HEART_FILTER} from '../actions/index.actions.js';
 
 const heartFilter = (state = false, action) => {
   switch (action.type) {

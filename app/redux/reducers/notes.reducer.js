@@ -1,4 +1,4 @@
-import {ADD_NOTE, TOGGLE_HEART, DELETE_NOTE} from '../actions/index.actions';
+import {ADD_NOTE, TOGGLE_HEART, DELETE_NOTE} from '../actions/index.actions.js';
 
 const notes = (state = [], action) => {
   switch (action.type) {

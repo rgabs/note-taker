@@ -1,5 +1,5 @@
-import AddNote from '../components/AddNote/AddNote.component';
-import {addNote} from '../redux/actions/index.actions';
+import AddNote from '../components/AddNote/AddNote.component.js';
+import {addNote} from '../redux/actions/index.actions.js';
 import {connect} from 'react-redux';
 
 const mapDispatchToProps = (dispatch) => ({

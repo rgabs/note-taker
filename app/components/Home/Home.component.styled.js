@@ -1,4 +1,4 @@
-import theme from '../../styles/theme.style';
+import theme from '../../styles/theme.style.js';
 import styled from 'styled-components';
 
 export const HomeWrapper = styled.View`

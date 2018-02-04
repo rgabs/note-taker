@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
-import Home from '../components/Home/Home.component';
-import * as actions from '../redux/actions/index.actions';
+import Home from '../components/Home/Home.component.js';
+import * as actions from '../redux/actions/index.actions.js';
 
 const getFilteredNotes = (notes, heartFilter) => heartFilter ? notes.filter((note) => note.heart) : notes;
 
