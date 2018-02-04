@@ -1,6 +1,5 @@
 import {StyleSheet} from 'react-native';
 import theme from '../../styles/theme.style';
-import commonStyles from '../../styles/common.style';
 
 export default StyleSheet.create({
   container: {
@@ -10,8 +9,7 @@ export default StyleSheet.create({
     justifyContent: 'space-between',
     elevation: 2,
     width: '100%',
-    backgroundColor: theme.HEADER_COLOR,
-    ...commonStyles.shadow
+    backgroundColor: theme.HEADER_COLOR
   },
   title: {
     color: 'white',

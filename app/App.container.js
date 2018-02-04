@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
-import {View} from 'react-native';
 import HomePage from './pages/Home.page';
 import AddNotePage from './pages/AddNote.page.js';
-import commonStyles from './styles/common.style';
+import {AppWrapper} from './styles/common.styled';
 
 class App extends Component {
   state = {
@@ -14,10 +13,10 @@ class App extends Component {
 
   render () {
     return (
-      <View style={commonStyles.appContainer}>
+      <AppWrapper>
         <HomePage onAddNotePress={this.showAddNote}/>
         <AddNotePage visible={this.state.addNoteVisibility} onClosePress={this.hideAddNote}/>
-      </View>
+      </AppWrapper>
     );
   }
 }

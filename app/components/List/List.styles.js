@@ -1,5 +1,4 @@
 import theme from '../../styles/theme.style';
-import commonStyles from '../../styles/common.style';
 
 export default {
   listItemWrapper: {
@@ -8,8 +7,7 @@ export default {
     borderRadius: 5,
     backgroundColor: 'white',
     borderColor: theme.BORDER_COLOR,
-    borderWidth: 0.5,
-    ...commonStyles.shadow
+    borderWidth: 0.5
   },
   rightContainer: {
     flex: 1,

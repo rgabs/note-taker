@@ -3,13 +3,11 @@ import PropTypes from 'prop-types';
 import {View, Platform, TextInput} from 'react-native';
 import Modal from 'react-native-modal-overlay';
 import StatusBar from '../StatusBar/StatusBar.component';
-import Touchable from 'react-native-platform-touchable';
 import Header from '../Header/Header.component';
 import styles from './AddNote.component.style.js';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import theme from '../../styles/theme.style';
-
-import commonStyles from '../../styles/common.style';
+import {HeaderIconWrapper} from '../../styles/common.styled';
 
 class AddNote extends Component {
   state = {
@@ -18,28 +16,28 @@ class AddNote extends Component {
   setNote = (note) => this.setState({note})
 
   onAddNotePress = () => {
-    this.props.saveNote(this.state.note);
+    this.state.note && this.props.saveNote(this.state.note);
     this.props.onClosePress();
   }
 
-  headerRight = <Touchable onPress={this.props.onClosePress} style={commonStyles.headerIconWrapper}>
+  headerRight = <HeaderIconWrapper onPress={this.props.onClosePress}>
     <Icon name='times' size={30} color='white' />
-  </Touchable>
+  </HeaderIconWrapper>
 
-  headerLeft = <Touchable onPress={this.onAddNotePress} style={commonStyles.headerIconWrapper}>
+  headerLeft = <HeaderIconWrapper onPress={this.onAddNotePress}>
     <Icon name='check' size={30} color='white' />
-  </Touchable>
+  </HeaderIconWrapper>
 
   render () {
     return (
-      <Modal visible={this.props.visible} animationDuration={250} containerStyle={styles.modalContainer} childrenWrapperStyle={styles.modalChildrenWrapper}>
+      <Modal visible={this.props.visible} animationDuration={250} containerStyle={styles.modalContainer}
+          childrenWrapperStyle={styles.modalChildrenWrapper}>
         {Platform.OS === 'ios' ? <StatusBar /> : null}
         <Header title='Add Note' rightComponent={this.headerRight} leftComponent={this.headerLeft}/>
         <View style={styles.inputContainer}>
           <TextInput underlineColorAndroid='transparent' placeholderTextColor={theme.PLACEHOLDER_COLOR} placeholder="What's on your mind?"
             multiline style={styles.input} onChangeText={this.setNote}/>
         </View>
-
       </Modal>);
   }
 }
