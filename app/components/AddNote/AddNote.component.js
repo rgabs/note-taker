@@ -32,7 +32,7 @@ class AddNote extends Component {
 
   render () {
     return (
-      <Modal visible={this.props.visible} containerStyle={styles.modalContainer} childrenWrapperStyle={styles.modalChildrenWrapper}>
+      <Modal visible={this.props.visible} animationDuration={250} containerStyle={styles.modalContainer} childrenWrapperStyle={styles.modalChildrenWrapper}>
         {Platform.OS === 'ios' ? <StatusBar /> : null}
         <Header title='Add Note' rightComponent={this.headerRight} leftComponent={this.headerLeft}/>
         <View style={styles.inputContainer}>

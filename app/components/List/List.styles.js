@@ -5,10 +5,10 @@ export default {
   listItemWrapper: {
     padding: 10,
     margin: 10,
-    borderRadius: 10,
+    borderRadius: 5,
     backgroundColor: 'white',
     borderColor: theme.BORDER_COLOR,
-    borderWidth: 1,
+    borderWidth: 0.5,
     ...commonStyles.shadow
   },
   rightContainer: {

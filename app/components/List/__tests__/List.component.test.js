@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer';
 
 describe('List component', () => {
   it('should render correctly', () => {
-    const progressBarTree = renderer.create(<List />).toJSON();
-    expect(progressBarTree).toMatchSnapshot();
+    const lisTree = renderer.create(<List />).toJSON();
+    expect(lisTree).toMatchSnapshot();
   });
 });
